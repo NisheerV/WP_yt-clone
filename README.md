@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ##Fixed loading indicator
 
-<img src="./public/fixed loading indicator.png"></img>
+<img src="./https://github.com/NisheerV/yt-clone_loading-screen/blob/main/public/fixed%20loading%20indicator.PNG"></img>
 
 ## Available Scripts
 
