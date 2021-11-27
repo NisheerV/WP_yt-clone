@@ -2,6 +2,8 @@ import CustomAppBar from "../components/CustomAppBar/CustomAppBar";
 import { useState, useEffect } from "react";
 import CustomTile from "../CustomTile/CustomTile";
 import { Row, Spinner } from "react-bootstrap";
+import "../App.css";
+
 const Home = () => {
   const [videos, setVideos] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -24,7 +26,9 @@ const Home = () => {
         }}
       />
       {videos.length === 0 ? (
-        <Spinner animation="grow" variant="light" className="my-auto mx-auto" />
+        <Row xs={1} md={3} className="row-style">
+          <Spinner animation="grow" variant="light" className="my-auto mx-auto" />
+        </Row>
       ) : (
         <Row xs={1} md={3} className="g-4">
           {videos
