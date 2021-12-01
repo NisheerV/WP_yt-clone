@@ -9,7 +9,7 @@ const Home = () => {
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
     async function getVideos() {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/videos`, {
+      const response = await fetch("https://salty-savannah-61881.herokuapp.com/videos", {
         method: "GET",
       });
       const data = await response.json();
@@ -26,11 +26,11 @@ const Home = () => {
         }}
       />
       {videos.length === 0 ? (
-        <Row xs={1} md={3} className="row-style">
+        <Row xs={1} md={4} className="row-style">
           <Spinner animation="grow" variant="light" className="my-auto mx-auto" />
         </Row>
       ) : (
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={4} className="g-4">
           {videos
             .filter((e) =>
               searchText.length !== 0
@@ -47,6 +47,7 @@ const Home = () => {
               />
             ))}
         </Row>
+        
       )}
     </div>
   );

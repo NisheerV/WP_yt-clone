@@ -6,26 +6,28 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
+import styles from "./CustomAppBar.module.css";
+
 const CustomAppBar = ({ label, onSearch }) => {
   return (
     <Navbar bg="dark" expand="lg" sticky="top">
       <Container fluid>
         <Navbar.Brand>
-          <img src="../logo.svg" alt="logo" height={70} />
+          <a href="/"><img src="../logo.svg" alt="logo" height={70} /></a>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Nav>
           <InputGroup className="mb-3">
-            <FormControl
-              placeholder="Search on TA Youtube"
-              aria-label="search on ta youtube"
+            <FormControl 
+              placeholder="Search Youtube"
+              aria-label="search youtube"
               aria-describedby="basic-addon2"
               onChange={onSearch}
             />
-            <Button variant="danger" type="submit">
+            <Button classname={styles.searchBtn} variant="danger" type="submit">
               Search
             </Button>
-            <Button variant="outline-light" href="/license">
+            <Button className="mx-3" variant="outline-light" href="/license">
               License
             </Button>
           </InputGroup>
