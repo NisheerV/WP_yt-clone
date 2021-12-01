@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Updated UI
+
+<img src="./public/UpdatedUI.PNG"></img>
+
+
 ## Fixed loading indicator
 
 <img src="./public/loadingindicator.PNG"></img>
